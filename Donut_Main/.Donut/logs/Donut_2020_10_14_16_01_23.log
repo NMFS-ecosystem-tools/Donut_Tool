@@ -1,0 +1,33 @@
+0 2020_10_14 16:01:23 - --- Start ---
+0 2020_10_14 16:01:23 - nmfSetup_Tab2::loadWidgets()
+0 2020_10_14 16:01:23 - nmfSetup_Tab3::loadWidgets()
+0 2020_10_14 16:01:23 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 16:01:30 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 16:01:42 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 16:49:48 - Reading Project File: /home/rklasky/Donut/Projects/TestProject2/Test2.prj
+0 2020_10_14 16:49:48 - nmfSetup_Tab2::loadWidgets()
+0 2020_10_14 16:49:48 - nmfSetup_Tab3::loadWidgets()
+0 2020_10_14 16:49:48 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 16:49:48 - loadProject end
+0 2020_10_14 16:50:27 - Saving Species Data
+0 2020_10_14 16:50:28 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 16:50:36 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 16:55:13 - Reading Project File: /home/rklasky/Donut/Projects/Demo_10_14_2020/Demo.prj
+0 2020_10_14 16:55:13 - nmfSetup_Tab2::loadWidgets()
+0 2020_10_14 16:55:13 - nmfSetup_Tab3::loadWidgets()
+0 2020_10_14 16:55:13 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 16:55:13 - loadProject end
+0 2020_10_14 17:42:18 - Reading Project File: /home/rklasky/Donut/Projects/Link (2004) TAFS Paper/Paper.prj
+0 2020_10_14 17:42:18 - nmfSetup_Tab2::loadWidgets()
+0 2020_10_14 17:42:18 - nmfSetup_Tab3::loadWidgets()
+0 2020_10_14 17:42:18 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 17:42:18 - loadProject end
+0 2020_10_14 17:43:53 - Saving Species Data
+0 2020_10_14 17:43:54 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 17:44:02 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 17:44:16 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 17:53:25 - Saving Species Data
+0 2020_10_14 17:53:26 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 17:53:38 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 17:53:52 - nmfSetup_Tab4::loadWidgets()
+0 2020_10_14 18:05:50 - --- End ---

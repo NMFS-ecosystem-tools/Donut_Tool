@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>881</width>
+    <height>529</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <widget class="QTabWidget" name="Setup_Tab3_GuildsSpeciesTabW">
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>Species</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="Setup_Tab3_SpeciesGB">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>100</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>Species</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_85">
+            <item>
+             <widget class="QLabel" name="Setup_Tab3_NumSpeciesLBL">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>150</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Number of species in the table</string>
+              </property>
+              <property name="statusTip">
+               <string>Number of species in the table</string>
+              </property>
+              <property name="text">
+               <string>Num Species:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="Setup_Tab3_NumSpeciesSB">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Number of species in the table</string>
+              </property>
+              <property name="statusTip">
+               <string>Number of species in the table</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Set Number of Species&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This widget allows the user to quickly set the number of species to the desired amount without having to click Add each time one is to be added.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Setup_Tab3_AddSpeciesPB">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Add a new Species after the last Species.</string>
+              </property>
+              <property name="statusTip">
+               <string>Add a new Species after the last Species.</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Add&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Adds a species to the current list of species. Both the species name and type must be set by the user.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Add</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Setup_Tab3_DelSpeciesPB">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>35</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>35</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="toolTip">
+               <string>Delete the currently selected Species</string>
+              </property>
+              <property name="statusTip">
+               <string>Delete the currently selected Species</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Del&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Deletes the currently selected species from the current list of species. All references to this species will be deleted from all data files. This is not undo-able.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>Del</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_91">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="Setup_Tab3_SpeciesTW">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>2</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>This table defines the Species in the current database table.</string>
+            </property>
+            <property name="statusTip">
+             <string>This table defines the Species in the current database table.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Species Table&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This table lists each species and their respective type. It forms the basis of all other tables in this tool.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>Interaction</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Prey</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Predator</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="Setup_Tab3_InteractionTW">
+           <property name="toolTip">
+            <string>This is the predator-prey interaction table</string>
+           </property>
+           <property name="statusTip">
+            <string>This is the predator-prey interaction table</string>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Predator-Prey Interaction Table&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This table illustrates which predators eat which prey. Cannibalism is taken into account by the same species being shown as predator and as prey. The user must click Save in order for the interactions to be saved. Once saved. the interaction relationships are depicted in Tab #4, Run Model.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_87">
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>65</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_95">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Setup_Tab3_LoadPB">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Load data for above tables;</string>
+       </property>
+       <property name="statusTip">
+        <string>Load data for above tables;</string>
+       </property>
+       <property name="text">
+        <string>Load...</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Setup_Tab3_SavePB">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Save data from above table</string>
+       </property>
+       <property name="statusTip">
+        <string>Save data from above table</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Save&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Saves the data from the above table into the corresponding project CSV data file.  User must click Save after entering data and before moving on to the next tab for proper code execution.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_42">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>48</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Setup_Tab3_NextPB">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Go to the next page</string>
+       </property>
+       <property name="statusTip">
+        <string>Go to the next page</string>
+       </property>
+       <property name="text">
+        <string>-&gt;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

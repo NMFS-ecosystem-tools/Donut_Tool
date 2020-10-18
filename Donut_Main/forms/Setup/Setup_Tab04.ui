@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1194</width>
+    <height>517</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="title">
+      <string>Select a Predator:</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_38">
+        <item>
+         <widget class="QLabel" name="Setup_Tab4_PredatorLBL">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>60</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Predator whose ranks are calculated</string>
+          </property>
+          <property name="statusTip">
+           <string>Predator whose ranks are calculated</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Predator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is the predator whose rank data will be calculated below. Each predator has associated with it a group of prey. These prey are shown in the bottom table. Additionally, the user may enter a comment associated with this predator in the text box directly below.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>Predator:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="Setup_Tab4_PredatorCMB">
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>Predator whose ranks are calculated</string>
+          </property>
+          <property name="statusTip">
+           <string>Predator whose ranks are calculated</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Predator&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is the predator whose rank data will be calculated below. Each predator has associated with it a group of prey. These prey are shown in the bottom table. Additionally, the user may enter a comment associated with this predator in the text box directly below.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_30">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>comment associated with above predator</string>
+        </property>
+        <property name="statusTip">
+         <string>comment associated with above predator</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Predator Comment&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This area is reserved for a comment associated with the current predator. It is stored with, and retrieved with, the predator's rank data below. &lt;/p&gt;&lt;p&gt;Be sure to click Save after adding a comment.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="text">
+         <string>Major Factors or Considerations of the Predator:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="Setup_Tab4_NotesTE">
+        <property name="font">
+         <font>
+          <weight>50</weight>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string>Comment associated with above predator</string>
+        </property>
+        <property name="statusTip">
+         <string>Comment associated with above predator</string>
+        </property>
+        <property name="whatsThis">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Predator Comment&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This area is reserved for a comment associated with the current predator. It is stored with, and retrieved with, the predator's rank data below. &lt;/p&gt;&lt;p&gt;Be sure to click Save after adding a comment.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>1</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string/>
+     </property>
+     <property name="statusTip">
+      <string/>
+     </property>
+     <property name="title">
+      <string>Complete Prey and Rank Matrix Tables and then Click Run:</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QScrollArea" name="Setup_Tab4_ScrollAreaSA">
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>1150</width>
+           <height>179</height>
+          </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="Setup_Tab4_PreyLBL">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prey&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is the basic prey data: taxa and relative abundance. The taxa field is automatically completed from the Species Setup tab. Relative abundance is filled in here. Relative abundance is optional and may be set to all 1's.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:400;&quot;&gt;Prey&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="Setup_Tab4_RankLBL">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>325</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>325</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rank Matrix&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is the input rank matrix. All fields must be filled in prior to clicking Run. Ranking is represented by numbers 1...N, where 1 is the highest rank and N, the total number of species, is the lowest rank. Columns are defined as follows:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Overlap:&lt;/span&gt; This spatiotemporal overlap determines what percent the predator and prey share the same place and the same time; this is optional and may be set to all 1's&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Detection:&lt;/span&gt; The encountering, locating, and identiication of a prey item&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reaction:&lt;/span&gt; Pursuit (predator modifies course and velocity to intercept prey) and attack (predator accelerates through prey location and via water inhalation or mandibular contraction brings prey item into its buccal cavity&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Capture:&lt;/span&gt; When prey enters buccal cavity of predator and stays there (aka. Handling)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ingestion:&lt;/span&gt; Movement of a prey item across the gill rakers toward the esophagael tract&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icing:&lt;/span&gt; Used to rank a prey item higher based on special or localized knowledge (e.g. the fish have learned to feed on a particular type of prey item, have a historical preference for a certain type of prey in a particular ecosystem); this is optional and may be set to all 1's&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Rank Matrix (R&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="Setup_Tab4_ProportionLBL">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>365</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>365</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rank Proportion Matrix&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Proportions are calculated for each of the Rank columns. The proportions in the Detection...Icing columns are calculated as follows. &lt;/p&gt;&lt;p&gt;P&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt; = |(N+1) - R&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt;| / [ N(N+1)/2 ]&lt;/p&gt;&lt;p&gt;where:&lt;/p&gt;&lt;p&gt;N = number of species&lt;br/&gt;R&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt; = entry in the rank table&lt;br/&gt;&lt;br/&gt;The subscripts are defined as follows:&lt;br/&gt;i = prey item&lt;br/&gt;j = fish predator&lt;br/&gt;m = rank category&lt;/p&gt;&lt;p&gt;The values in the Product column are calculated by:&lt;/p&gt;&lt;p&gt;S&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; = &lt;a name=&quot;MathJax-Element-15-Frame&quot;/&gt;&lt;span style=&quot; font-family:'MathJax_Size1'; font-size:18px; color:#282829;&quot;&gt;∏&lt;/span&gt;P&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt;&lt;/p&gt;&lt;p&gt;However, if there exist Relative Abundance (A&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;) and Overlap (O&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;) data then diet composition (D&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;) is specified as follows: &lt;/p&gt;&lt;p&gt;D&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; = A&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; * O&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; * S&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;&lt;/p&gt;&lt;p&gt;and that is what's specified in the Product column.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Proportion Matrix&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="Setup_Tab4_OutputMatrixLBL">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>205</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>205</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Outputs&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The values in these 3 columns represent the final calculated values in this tool and are plotted in the charts available in the Output window. There are 3 final calculated values:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;1. RPA Model&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This value, D'&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;, provides a prediction of the diet composition of prey i in the current predator j. It's calculated by:&lt;/p&gt;&lt;p&gt;D'&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; = D&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; / &lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14px; color:#4d5156;&quot;&gt;ΣD&lt;/span&gt;&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2. Null Ambient (Ai)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is the relative abundance for each prey item.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;3. Null Selectivity&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is 1/N for each prey item.&lt;/p&gt;&lt;p&gt;Where,&lt;/p&gt;&lt;p&gt;N = number of prey items&lt;br/&gt;i = prey item&lt;br/&gt;j = fish predator&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Outputs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>0</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <spacer name="Setup_Tab4_HSpacerHS">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>10</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="Line" name="Setup_Tab4_PreyLN">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>15</width>
+                <height>5</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="Line" name="line_3">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rank Matrix&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is the input rank matrix. All fields must be filled in prior to clicking Run. Ranking is represented by numbers 1...N, where 1 is the highest rank and N, the total number of species, is the lowest rank. Columns are defined as follows:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Overlap:&lt;/span&gt; This spatiotemporal overlap determines what percent the predator and prey share the same place and the same time; this is optional and may be set to all 1's&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Detection:&lt;/span&gt; The encountering, locating, and identiication of a prey item&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Reaction:&lt;/span&gt; Pursuit (predator modifies course and velocity to intercept prey) and attack (predator accelerates through prey location and via water inhalation or mandibular contraction brings prey item into its buccal cavity&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Capture:&lt;/span&gt; When prey enters buccal cavity of predator and stays there (aka. Handling)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ingestion:&lt;/span&gt; Movement of a prey item across the gill rakers toward the esophagael tract&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Icing:&lt;/span&gt; Used to rank a prey item higher based on special or localized knowledge (e.g. the fish have learned to feed on a particular type of prey item, have a historical preference for a certain type of prey in a particular ecosystem); this is optional and may be set to all 1's&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>5</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="Line" name="line_4">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>345</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>345</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rank Proportion Matrix&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Proportions are calculated for each of the Rank columns. The proportions in the Detection...Icing columns are calculated as follows. &lt;/p&gt;&lt;p&gt;P&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt; = |(N+1) - R&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt;| / [ N(N+1)/2 ]&lt;/p&gt;&lt;p&gt;where:&lt;/p&gt;&lt;p&gt;N = number of species&lt;br/&gt;R&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt; = entry in the rank table&lt;br/&gt;&lt;br/&gt;The subscripts are defined as follows:&lt;br/&gt;i = prey item&lt;br/&gt;j = fish predator&lt;br/&gt;m = rank category&lt;/p&gt;&lt;p&gt;The values in the Product column are calculated by:&lt;/p&gt;&lt;p&gt;S&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; = &lt;a name=&quot;MathJax-Element-15-Frame&quot;/&gt;&lt;span style=&quot; font-family:'MathJax_Size1'; font-size:18px; color:#282829;&quot;&gt;∏&lt;/span&gt;P&lt;span style=&quot; vertical-align:sub;&quot;&gt;ijm&lt;/span&gt;&lt;/p&gt;&lt;p&gt;However, if there exist Relative Abundance (A&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;) and Overlap (O&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;) data then diet composition (D&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;) is specified as follows: &lt;/p&gt;&lt;p&gt;D&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; = A&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; * O&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; * S&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;&lt;/p&gt;&lt;p&gt;and that is what's specified in the Product column.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Fixed</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>5</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="Line" name="line_5">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>245</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>245</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Outputs&lt;/span&gt;&lt;/p&gt;&lt;p&gt;The values in these 3 columns represent the final calculated values in this tool and are plotted in the charts available in the Output window. There are 3 final calculated values:&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;1. RPA Model&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This value, D'&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;, provides a prediction of the diet composition of prey i in the current predator j. It's calculated by:&lt;/p&gt;&lt;p&gt;D'&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; = D&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt; / &lt;span style=&quot; font-family:'Roboto,arial,sans-serif'; font-size:14px; color:#4d5156;&quot;&gt;ΣD&lt;/span&gt;&lt;span style=&quot; vertical-align:sub;&quot;&gt;ij&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;2. Null Ambient (Ai)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is the relative abundance for each prey item.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;3. Null Selectivity&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This is 1/N for each prey item.&lt;/p&gt;&lt;p&gt;Where,&lt;/p&gt;&lt;p&gt;N = number of prey items&lt;br/&gt;i = prey item&lt;br/&gt;j = fish predator&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>5</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableView" name="Setup_Tab4_DataTV">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+              <horstretch>2</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>400</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <weight>50</weight>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string/>
+            </property>
+            <property name="statusTip">
+             <string>Rank data for current predator</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Rank Data&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This table contains the rank data (both input and output) for the current predator. The user inputs data only in cells with white backgrounds. All other cells are either automatically filled in or calculated when the user clicks Run.&lt;/p&gt;&lt;p&gt;For more detailed information on each individual matrix, click WhatsThis help on the specific matrix label above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSlider" name="Setup_Tab4_DataSL">
+            <property name="toolTip">
+             <string>Overlay interaction slider</string>
+            </property>
+            <property name="statusTip">
+             <string>Overlay interaction slider</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Overlay Interaction Slider&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If the user first selects 1 or more Overlap cells, this slider will allow the user to modify those values and then will immediately re-calculate the model and update the output chart. The Overlap values are limited to values between 0 and 1.0, inclusive.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="sliderPosition">
+             <number>50</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_87">
+     <item>
+      <widget class="QPushButton" name="Setup_Tab4_PrevPB">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>60</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="toolTip">
+        <string>Go to the previous page</string>
+       </property>
+       <property name="statusTip">
+        <string>Go to the previous page</string>
+       </property>
+       <property name="text">
+        <string>&lt;-</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_95">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Setup_Tab4_LoadPB">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Load data from current Predator file</string>
+       </property>
+       <property name="statusTip">
+        <string>Load data from current Predator file</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Load&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Loads the above Rank data and Comments from the correspoding predator data file. This is useful if the user has changed the data and then wants to revert back to the last saved data.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Load</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Setup_Tab4_RunPB">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>90</width>
+         <height>60</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>Run the model using the above data</string>
+       </property>
+       <property name="statusTip">
+        <string>Run the model using the above data</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Run&lt;/span&gt;&lt;/p&gt;&lt;p&gt;This runs the model using the above input Rank data. The shaded parts of the table are filled in and the output charts are drawn.&lt;/p&gt;&lt;p&gt;N.B. Run checks the integrity of the data and informs the user of a problem. It then runs with model without doing a Save. The user must explicitly click the Save button for the data to be saved. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Run</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Setup_Tab4_SavePB">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="toolTip">
+        <string>Save above data</string>
+       </property>
+       <property name="statusTip">
+        <string>Save above data</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Save&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Saves the above data to its predator CSV data file. This file is located in the project defined in Tab 2, Project Setup.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>Save</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_42">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>48</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>65</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

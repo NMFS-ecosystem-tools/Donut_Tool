@@ -1,0 +1,7 @@
+<map id="Donut_Main/nmfMainWindow.h" name="Donut_Main/nmfMainWindow.h">
+<area shape="rect" id="node25" href="$nmf_setup_tab01_8h.html" title="GUI definition for the Setup Getting Started page class nmfSetup_Tab1. " alt="" coords="1705,80,1830,107"/>
+<area shape="rect" id="node27" href="$nmf_setup_tab02_8h.html" title="GUI definition for the Setup Project page class nmfSetup_Tab2. " alt="" coords="1955,80,2081,107"/>
+<area shape="rect" id="node33" href="$nmf_setup_tab04_8h.html" title="GUI definition for the Setup Model page class nmfSetup_Tab4. " alt="" coords="1505,80,1630,107"/>
+<area shape="rect" id="node43" href="$nmf_setup_tab03_8h.html" title="GUI definition for the Setup Species page class nmfSetup_Tab3. " alt="" coords="1123,80,1249,107"/>
+<area shape="rect" id="node39" href="$nmf_donut_model_a_p_i_8h.html" title="API definition for the calculations of the Rank Proportion Algorithm. No GUI data here..." alt="" coords="2070,155,2217,181"/>
+</map>
