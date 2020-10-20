@@ -28,7 +28,6 @@
  * Please cite the author(s) in any work or product based on this material.
  */
 
-#include "nmfDatabase.h"
 #include "nmfLogger.h"
 #include "nmfUtils.h"
 
@@ -103,7 +102,7 @@
 #include <QVector>
 #include <QWhatsThis>
 
-#include <QtConcurrent>
+//#include <QtConcurrent>
 
 #include <QtCharts/QChart>
 #include <QtCharts/QChartView>

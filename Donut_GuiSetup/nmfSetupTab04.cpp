@@ -265,7 +265,8 @@ nmfSetup_Tab4::loadWidgets()
 void
 nmfSetup_Tab4::readSettings()
 {
-    QSettings* settings = nmfUtilsQt::createSettings(nmfConstantsDonut::SettingsDirWindows,"DonutTool");
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
 
     settings->beginGroup("Settings");
     m_ProjectSettingsConfig = settings->value("Name","").toString().toStdString();

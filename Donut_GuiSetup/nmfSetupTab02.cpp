@@ -425,7 +425,8 @@ void
 nmfSetup_Tab2::readSettings()
 {
     // Read the settings and load into class variables.
-    QSettings* settings = nmfUtilsQt::createSettings(nmfConstantsDonut::SettingsDirWindows,"DonutTool");
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
 
     settings->beginGroup("SetupTab");
     m_ProjectName        = settings->value("ProjectName","").toString();
@@ -447,7 +448,8 @@ nmfSetup_Tab2::readSettings()
 void
 nmfSetup_Tab2::saveSettings()
 {
-    QSettings* settings = nmfUtilsQt::createSettings(nmfConstantsDonut::SettingsDirWindows,"DonutTool");
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
 
     settings->beginGroup("SetupTab");
     settings->setValue("ProjectName",        getProjectName());

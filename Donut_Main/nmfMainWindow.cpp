@@ -1,15 +1,10 @@
 
 #include "nmfMainWindow.h"
 #include "ui_nmfMainWindow.h"
-#include "nmfUtilsQt.h"
 
 #include "nmfConstantsDonut.h"
 #include "nmfConstants.h"
 
-#include <QLineSeries>
-#include <QProcess>
-#include <QtConcurrent>
-#include <QWhatsThis>
 
 // This is needed since a signal is passing a std::string type
 Q_DECLARE_METATYPE (std::string)
@@ -19,7 +14,6 @@ nmfMainWindow::nmfMainWindow(QWidget *parent) :
     m_UI(new Ui::nmfMainWindow)
 {
     QVBoxLayout* vlayt = new QVBoxLayout();
-
 
     if (! okSplashScreen()) {
         close();
@@ -35,6 +29,7 @@ nmfMainWindow::nmfMainWindow(QWidget *parent) :
     m_ProjectSettingsConfig.clear();
 
     m_PreferencesDlg = new QDialog(this);
+    m_SplashDlg      = nullptr;
     m_ChartWidget    = new QChart();
     m_ChartView2d    = new QChartView(m_ChartWidget);
     m_UI->OutputChartTab->setLayout(vlayt);
@@ -46,12 +41,13 @@ nmfMainWindow::nmfMainWindow(QWidget *parent) :
                                  nmfConstantsDonut::HiddenLogDir);
 
     // Check for log files
-    nmfUtilsQt::checkForAndDeleteLogFiles("Donut",
-             nmfConstantsDonut::HiddenLogDir,
-             nmfConstantsDonut::LogFilter);
+    nmfUtilsQt::checkForAndDeleteLogFiles(
+                QApplication::applicationName(),
+                nmfConstantsDonut::HiddenLogDir,
+                nmfConstantsDonut::LogFilter);
 
     m_Logger = new nmfLogger();
-    m_Logger->initLogger("Donut");
+    m_Logger->initLogger(QApplication::applicationName().toStdString());
     m_Logger->logMsg(nmfConstants::Normal,"--- Start ---");
 
     readSettingsGuiOrientation(nmfConstantsDonut::ResetPositionAlso);
@@ -271,24 +267,38 @@ bool
 nmfMainWindow::okSplashScreen()
 {
    QLabel* splashLBL    = new QLabel();
-   QDialog* dlg         = new QDialog();
-   QPushButton* startPB = new QPushButton("Start");
+   m_SplashDlg          = new QDialog();
+   QPushButton* resetGUIPB      = new QPushButton("Reset GUI");
+   QPushButton* startPB         = new QPushButton("Start");
+   QPushButton* resetSettingsPB = new QPushButton("Reset Settings");
    QVBoxLayout* vlayt   = new QVBoxLayout();
    QHBoxLayout* hlayt   = new QHBoxLayout();
    QPixmap splashPM(":/icons/splashWithNOAAv2.jpg");
+   startPB->setFixedWidth(100);
+   startPB->setFixedHeight(50);
+   resetGUIPB->setToolTip("Move main GUI back to (0,0). (Useful if GUI gets lost.)");
+   resetGUIPB->setStatusTip("Move main GUI back to (0,0). (Useful if GUI gets lost.)");
+   resetSettingsPB->setToolTip("Remove Settings file. (Useful if App won't start.)");
+   resetSettingsPB->setStatusTip("Remove Settings file. (Useful if App won't start.)");
 
    splashLBL->setPixmap(splashPM);
    splashLBL->setMask(splashPM.mask());
    hlayt->addSpacerItem(new QSpacerItem(2,1,QSizePolicy::Expanding,QSizePolicy::Fixed));
+   hlayt->addWidget(resetGUIPB);
    hlayt->addWidget(startPB);
+   hlayt->addWidget(resetSettingsPB);
    hlayt->addSpacerItem(new QSpacerItem(2,1,QSizePolicy::Expanding,QSizePolicy::Fixed));
    vlayt->addWidget(splashLBL);
    vlayt->addLayout(hlayt);
-   dlg->setLayout(vlayt);
-   connect(startPB,SIGNAL(clicked()),
-           dlg,    SLOT(close()));
-   dlg->setWindowTitle("Donut Tool");
-   dlg->exec();
+   m_SplashDlg->setLayout(vlayt);
+   connect(startPB,          SIGNAL(clicked()),
+           m_SplashDlg,              SLOT(close()));
+   connect(resetGUIPB,       SIGNAL(clicked()),
+           this,             SLOT(callback_ResetGUI()));
+   connect(resetSettingsPB,  SIGNAL(clicked()),
+           this,             SLOT(callback_ResetSettings()));
+   m_SplashDlg->setWindowTitle("Donut Tool");
+   m_SplashDlg->exec();
 
    return true;
 }
@@ -296,7 +306,8 @@ nmfMainWindow::okSplashScreen()
 void
 nmfMainWindow::readSettings()
 {
-    QSettings* settings = nmfUtilsQt::createSettings(nmfConstantsDonut::SettingsDirWindows,"DonutTool");
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
 
     settings->beginGroup("Settings");
     m_ProjectSettingsConfig = settings->value("Name","").toString().toStdString();
@@ -316,7 +327,8 @@ nmfMainWindow::readSettings()
 void
 nmfMainWindow::readSettingsGuiOrientation(bool alsoResetPosition)
 {
-    QSettings* settings = nmfUtilsQt::createSettings(nmfConstantsDonut::SettingsDirWindows,"DonutTool");
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
 
     settings->beginGroup("MainWindow");
     resize(settings->value("size", QSize(400, 400)).toSize());
@@ -435,7 +447,8 @@ nmfMainWindow::saveRankDataFile(QString filename)
 void
 nmfMainWindow::saveSettings() {
 
-    QSettings* settings = nmfUtilsQt::createSettings(nmfConstantsDonut::SettingsDirWindows,"DonutTool");
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
 
     settings->beginGroup("MainWindow");
     settings->setValue("pos", pos());
@@ -455,6 +468,19 @@ nmfMainWindow::saveSettings() {
 
     // Save other pages' settings
     Setup_Tab2_ptr->saveSettings();
+}
+
+void
+nmfMainWindow::saveDefaultSettings()
+{
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
+
+    settings->beginGroup("MainWindow");
+    settings->setValue("pos", QPoint(0,0));
+    settings->endGroup();
+
+    delete settings;
 }
 
 void
@@ -566,6 +592,38 @@ nmfMainWindow::callback_ReloadWidgets()
 }
 
 void
+nmfMainWindow::callback_ResetGUI()
+{
+    QMessageBox::StandardButton reply =
+            QMessageBox::question(m_SplashDlg,
+                                  tr("Reset GUI"),
+                                  tr("\nOK to reset GUI position?\n"),
+                                  QMessageBox::No|QMessageBox::Yes,
+                                  QMessageBox::Yes);
+    if (reply == QMessageBox::Yes) {
+        saveDefaultSettings();
+    }
+}
+
+void
+nmfMainWindow::callback_ResetSettings()
+{
+    QMessageBox::StandardButton reply =
+            QMessageBox::question(m_SplashDlg,
+                                  tr("Reset Settings"),
+                                  tr("\nOK to reset application settings?\n"),
+                                  QMessageBox::No|QMessageBox::Yes,
+                                  QMessageBox::Yes);
+    if (reply == QMessageBox::Yes) {
+        nmfUtilsQt::removeSettingsFile();
+        QMessageBox::information(m_SplashDlg,
+                                 tr("Reset Settings"),
+                                 tr("\nSettings reset.\n\nUser interface settings will be set again upon application exit.\n"),
+                                 QMessageBox::Ok);
+    }
+}
+
+void
 nmfMainWindow::callback_SetupTabChanged(int tab)
 {
     QModelIndex topLevelIndex = m_NavigatorTree->model()->index(0,0); // first 0 is Setup group in NavigatorTree
@@ -665,7 +723,7 @@ void
 nmfMainWindow::menu_about()
 {
     QString name    = "Tool for predicting prey preference and diet composition";
-    QString version = "Donut Tool v0.9.0 (beta)";
+    QString version = "Donut Tool v0.9.1 (beta)";
     QString specialAcknowledgement = "";
     QString cppVersion   = "C++??";
     QString boostVersion = "?";

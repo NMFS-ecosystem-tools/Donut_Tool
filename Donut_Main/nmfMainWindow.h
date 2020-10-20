@@ -30,12 +30,13 @@
 #ifndef NMFMAINWINDOW_H
 #define NMFMAINWINDOW_H
 
-//#include <nlopt.hpp>
 
 #include <QCheckBox>
 #include <QComboBox>
+#include <QFileInfo>
 #include <QLabel>
 #include <QObject>
+#include <QMainWindow>
 #include <QPushButton>
 #include <QSpinBox>
 #include <QStandardItem>
@@ -50,13 +51,13 @@
 #include <QWhatsThis>
 #include <QWidget>
 
-#include "nmfLogWidget.h"
 #include "nmfUtilsStatistics.h"
 #include "nmfStructsQt.h"
 #include "nmfUtilsQt.h"
 
 #include "nmfChartBar.h"
 #include "nmfChartDonut.h"
+#include "nmfLogWidget.h"
 
 
 
@@ -122,6 +123,7 @@ private:
     QTreeWidget*   m_NavigatorTree;
     QDialog*       m_PreferencesDlg;
     QWidget*       m_PreferencesWidget;
+    QDialog*       m_SplashDlg;
     nmfSetup_Tab1* Setup_Tab1_ptr;
     nmfSetup_Tab2* Setup_Tab2_ptr;
     nmfSetup_Tab3* Setup_Tab3_ptr;
@@ -145,6 +147,7 @@ private:
     bool        saveRankDataFile(QString filename);
     bool        saveScreenshot(QString &outputfile, QPixmap &pm);
     void        saveSettings();
+    void        saveDefaultSettings();
     void        setupLogWidget();
     void        updateWindowTitle();
 
@@ -158,6 +161,8 @@ public slots:
     void callback_PreferencesSetStyleSheet(QString style);
     void callback_ProjectSaved();
     void callback_ReloadWidgets();
+    void callback_ResetGUI();
+    void callback_ResetSettings();
     void callback_SetupTabChanged(int tab);
     void callback_ShowOutputChart(
             QString Predator,
