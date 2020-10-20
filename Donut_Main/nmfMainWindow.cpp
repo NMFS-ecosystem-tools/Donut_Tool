@@ -493,7 +493,8 @@ nmfMainWindow::setupLogWidget()
 void
 nmfMainWindow::updateWindowTitle()
 {
-    QSettings* settings = nmfUtilsQt::createSettings(nmfConstantsDonut::SettingsDirWindows,"DonutTool");
+    QSettings* settings = nmfUtilsQt::createSettings(
+                nmfConstantsDonut::SettingsDirWindows,QApplication::applicationName());
 
     settings->beginGroup("SetupTab");
     m_ProjectName     = settings->value("ProjectName","").toString().toStdString();
