@@ -478,7 +478,7 @@ nmfSetup_Tab3::saveSpeciesData()
     if ( file.open(QIODevice::WriteOnly|QIODevice::Text) )
     {
         QTextStream stream(&file);
-        for (int i=0; i<speciesNames.size(); ++i) {
+        for (int i=0; i<int(speciesNames.size()); ++i) {
             stream << QString::fromStdString(speciesNames[i]) << "," << QString::fromStdString(speciesTypes[i]) << "\n"; // << std::endl;
         }
         file.close();

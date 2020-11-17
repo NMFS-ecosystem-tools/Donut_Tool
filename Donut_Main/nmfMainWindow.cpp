@@ -665,7 +665,7 @@ nmfMainWindow::callback_ShowOutputChart(
         nmfUtils::initialize(ChartData,3,RPAData.size());
         QStringList RowLabels = {"RPA Model","Null Ambient (Ai)","Null Selectivity"};
         for (std::vector<double> data : {RPAData,AiData,NullData}) {
-            for (int j=0; j<data.size(); ++j) {
+            for (int j=0; j<int(data.size()); ++j) {
                 ChartData(i,j) = data[j];
             }
             ++i;
@@ -686,7 +686,7 @@ nmfMainWindow::callback_ShowOutputChart(
         for (std::string species : Species) {
             RowLabels << QString::fromStdString(species);
         }
-        for (int j=0; j<RPAData.size();++j) {
+        for (int j=0; j<int(RPAData.size());++j) {
             ChartData(j,0) = RPAData[j];
             ChartData(j,1) = AiData[j];
             ChartData(j,2) = NullData[j];
@@ -704,7 +704,7 @@ nmfMainWindow::callback_ShowOutputChart(
         nmfUtils::initialize(ChartData,3,RPAData.size());
         QStringList RowLabels = {"Null Selectivity","Rel Abund","RPA Model"};
         for (std::vector<double> data : {NullData,AiData,RPAData}) {
-            for (int j=0; j<data.size(); ++j) {
+            for (int j=0; j<int(data.size()); ++j) {
                 ChartData(i,j) = data[j];
             }
             ++i;
@@ -724,7 +724,7 @@ void
 nmfMainWindow::menu_about()
 {
     QString name    = "Tool for predicting prey preference and diet composition";
-    QString version = "Donut Tool v0.9.1 (beta)";
+    QString version = "Donut Tool v0.9.2 (beta)";
     QString specialAcknowledgement = "";
     QString cppVersion   = "C++??";
     QString boostVersion = "?";
